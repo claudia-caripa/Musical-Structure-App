@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
@@ -48,21 +49,31 @@ public class MainActivity extends AppCompatActivity {
         // Find the View that shows the all songs category
         TextView allSongs = (TextView) findViewById(R.id.all_songs);
 
-       allSongs.setOnClickListener(new OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent allSongsIntent = new Intent(MainActivity.this, AllSongsActivity.class);
+        allSongs.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent allSongsIntent = new Intent(MainActivity.this, AllSongsActivity.class);
 
-               startActivity(allSongsIntent);
-           }
-       });
+                startActivity(allSongsIntent);
+            }
+        });
+
+        Button playButton = (Button) findViewById(R.id.play_button);
+        playButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CharSequence text = "Playing your favourite song";
+                Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
+            }
+        });
 
 
     }
 
-    public void playMusic (View view){
-        CharSequence text = "Playing your favourite song";
-        Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
-
-    }
 }
+
+
+
+
+
+
