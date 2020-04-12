@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Musical Strucure App</string>
+    <string name="all_songs_category">All Songs</string>
+    <string name="playlist_category">Playlist</string>
+    <string name="recently_added_category">Recently Added</string>
+    <string name="christmas_playlist_name">Christmas</string>
+    <string name="summer_playlist_name">Summer</string>
+    <string name="play">Play</string>
+</resources>
